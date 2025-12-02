@@ -1,8 +1,4 @@
-//gcc -Wall -Wextra client_1to1.c -o client_1to1 -pthread
-//./client_1to1 127.0.0.1 4444
 //thread, 1대1
-
-// Run: ./client_1to1 <server_ip> <port>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
