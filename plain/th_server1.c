@@ -1,9 +1,4 @@
-//gcc -Wall -Wextra server_1to1.c -o server_1to1 -pthread
-//./server_1to1 4444
 //thread, 1대1
-
-// Run: ./server_1to1 <port>
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
