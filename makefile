@@ -2,25 +2,19 @@ CC=gcc
 CFLAGS=-Wall -g
 LIBS=-lcrypto
 
-all: plain_server plain_client aes_test sha256_test server_full client_full
+all: thread_server.c thread_client.c th_server1.c th_client1.c test_aes.c
 
-plain_server: plain_server.c
-	$(CC) $(CFLAGS) -o plain_server plain_server.c
+ths: thread_server.c
+	$(CC) $(CFLAGS) -o ths thread_server.c
 
-plain_client: plain_client.c
-	$(CC) $(CFLAGS) -o plain_client plain_client.c
+thc: thread_client.c
+	$(CC) $(CFLAGS) -o thc thread_client.c
 
-aes_test: aes_test.c
+th_s1: th_server1.c
+	$(CC) $(CFLAGS) -o th_s1 th_server1.c
+
+th_c1: th_client1.c
+	$(CC) $(CFLAGS) -o th_c1 th_client1.c
+
+aes_test: test_aes.c
 	$(CC) $(CFLAGS) -o aes_test aes_test.c -lcrypto
-
-sha256_test: sha256_test.c
-	$(CC) $(CFLAGS) -o sha256_test sha256_test.c -lcrypto
-
-server_full: server_full.c crypto.c
-	$(CC) $(CFLAGS) -o server_full server_full.c crypto.c $(LIBS)
-
-client_full: client_full.c crypto.c
-	$(CC) $(CFLAGS) -o client_full client_full.c crypto.c $(LIBS)
-
-clean:
-	rm -f plain_server plain_client aes_test sha256_test server_full client_full *.o
