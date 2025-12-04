@@ -18,3 +18,12 @@ th_c1: th_client1.c
 
 aes_test: test_aes.c
 	$(CC) $(CFLAGS) -o aes_test aes_test.c -lcrypto
+
+sha_test: test_sha.c crypto.c crypto.h
+	$(CC) $(CFLAGS) $(LDFLAGS) -o sha_test test_sha.c crypto.c \
+	$(OPENSSL_PATH)/lib/libcrypto.dylib
+
+rsa_test: test_rsa_client.c crypto.c crypto.h
+	$(CC) $(CFLAGS) $(LDFLAGS) -o rsa_test \
+	test_rsa_client.c crypto.c \
+	$(OPENSSL_PATH)/lib/libcrypto.dylib
