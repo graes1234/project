@@ -1,4 +1,3 @@
-// Compile: gcc aes_test.c -o aes_test -lcrypto
 //AES-256-CBC 암/복호화 단독 테스트
 #include <stdio.h>
 #include <string.h>
