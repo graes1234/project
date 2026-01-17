@@ -1,5 +1,5 @@
 ## CLI-Based Secure Messaging with Session Key Encryption
-
+
 ## 프로젝트 개요
 - 세션키를 이용한 대칭키 기반 암호화 메시징 구현
 - 메시지가 전송되는 과정에서 암 복호화 흐름을 CLI 환경에서 단계별로 시각적으로 확인할 수 있도록 설계
