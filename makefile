@@ -1,29 +1,18 @@
+OPENSSL_PATH=$(shell brew --prefix openssl@3)
+
 CC=gcc
-CFLAGS=-Wall -g
-LIBS=-lcrypto
+CFLAGS=-Wall -g -I/opt/homebrew/opt/openssl@3/include
+LDFLAGS=-L/opt/homebrew/opt/openssl@3/lib -lcrypto -lssl
+RPATH=-Wl,-rpath,/opt/homebrew/opt/openssl@3/li
 
-all: thread_server.c thread_client.c th_server1.c th_client1.c test_aes.c
+all: client_full.c server_full.c
 
-ths: thread_server.c
-	$(CC) $(CFLAGS) -o ths thread_server.c
+sf: server_full.c crypto.c crypto.h
+	$(CC) $(CFLAGS) -o sf server_full.c crypto.c $(LDFLAGS)
 
-thc: thread_client.c
-	$(CC) $(CFLAGS) -o thc thread_client.c
+cf: client_full.c crypto.c crypto.h
+	$(CC) $(CFLAGS) -o cf client_full.c crypto.c $(LDFLAGS)
 
-th_s1: th_server1.c
-	$(CC) $(CFLAGS) -o th_s1 th_server1.c
+clean:
+	rm -f sf cf *.o
 
-th_c1: th_client1.c
-	$(CC) $(CFLAGS) -o th_c1 th_client1.c
-
-aes_test: test_aes.c
-	$(CC) $(CFLAGS) -o aes_test aes_test.c -lcrypto
-
-sha_test: test_sha.c crypto.c crypto.h
-	$(CC) $(CFLAGS) $(LDFLAGS) -o sha_test test_sha.c crypto.c \
-	$(OPENSSL_PATH)/lib/libcrypto.dylib
-
-rsa_test: test_rsa_client.c crypto.c crypto.h
-	$(CC) $(CFLAGS) $(LDFLAGS) -o rsa_test \
-	test_rsa_client.c crypto.c \
-	$(OPENSSL_PATH)/lib/libcrypto.dylib
