@@ -32,15 +32,12 @@
 
 <img width="100%" height="100%" alt="1  시연 (2)" src="https://github.com/user-attachments/assets/6145e0a5-d868-4ade-b278-8e72455c72d9" />
 
-
-## 결과
-<img width="70%" height="70%" alt="1  최종결과물" src="https://github.com/user-attachments/assets/166299a5-53f2-4631-b3be-f59cbf0edde7" />
-
 ## 사용 기술
 - Launuage: C
 - Environment: CLI
 - Cryptography: 대칭키 암호화 방식(Session Key 기반)
 
 ## 최종 결과물
+<img width="70%" height="70%" alt="1  최종결과물" src="https://github.com/user-attachments/assets/166299a5-53f2-4631-b3be-f59cbf0edde7" />
 
 
