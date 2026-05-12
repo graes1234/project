@@ -25,12 +25,9 @@
 - CLI 환경에서 암호화 흐름 직관적으로 확인 가능
 
 ## 데이터 흐름
-<img width="997" height="584" alt="1  데이터 흐름" src="https://github.com/user-attachments/assets/24dc9c7b-699c-4f28-8a44-3f956eb3cff9" />  
+<img width="100" height="100" alt="1  데이터 흐름" src="https://github.com/user-attachments/assets/24dc9c7b-699c-4f28-8a44-3f956eb3cff9" />  
 
 ## 결과
-<img width="1410" height="627" alt="1  시연 1" src="https://github.com/user-attachments/assets/fd5f8017-8ae3-4137-9018-1a5b035ea000" />  
-
-<img width="1375" height="522" alt="1  시연 2" src="https://github.com/user-attachments/assets/ead5f1f4-2b9d-4fca-a3ac-c07c297f5f16" />
 
 ## 사용 기술
 - Launuage: C
@@ -38,7 +35,5 @@
 - Cryptography: 대칭키 암호화 방식(Session Key 기반)
 
 ## 최종 결과물
-<img width="1286" height="424" alt="1  최종결과물" src="https://github.com/user-attachments/assets/dea3ad3b-ac12-4228-8adc-34cdfd21def6" />
-
 
 
