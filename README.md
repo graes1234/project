@@ -24,6 +24,33 @@
 - 키 입력 시 ECHO OFF 처리로 민감 정보 노출 방지
 - CLI 환경에서 암호화 흐름 직관적으로 확인 가능
 
+## 문제 해결
+1) 키 입력이 상대방 입력으로 전달되는 문제
+-원인: 입력/수신 스레드가 동일한 stdin을 공유
+
+-해결: 입력을 IO 스레드로 단일화
+
+decrypt_pending 플래그 + thread mutex로 제어  
+
+recv_thread는 직접 입력을 받지 않고 플래그만 설정
+
+2) Enter(개행)이 암호문으로 처리되는 문제
+-원인: stdin 버퍼에 개행이 남아 다음 메시지로 처리됨
+
+-해결: strlen == 0일 경우 즉시 continue 처리 및 개행 제거 로직 일원화
+
+3) 무결성 검증 기능이 작동하지 않던 문제
+-원인: hash_hex 파싱 오류 및 데이터 분리 문제
+
+-해결: 패킷을 cipher|hash 형태로 통합
+
+strchr()로 안정적인 분리 및 hex_to_bytes() 적용
+
+4) 스레드 충돌 및 버퍼 파손 문제
+-원인: 여러 스레드가 동시에 공용 버퍼에 접근
+
+-해결: 입력·수신·복호화 과정을 명확히 분리하고 Mutex로 공용 버퍼 보호
+
 ## 데이터 흐름
 <img width="70%" height="70%" alt="1  데이터 흐름" src="https://github.com/user-attachments/assets/24dc9c7b-699c-4f28-8a44-3f956eb3cff9" />  
 
