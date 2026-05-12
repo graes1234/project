@@ -25,9 +25,10 @@
 - CLI 환경에서 암호화 흐름 직관적으로 확인 가능
 
 ## 데이터 흐름
-<img width="50%" height="50%" alt="1  데이터 흐름" src="https://github.com/user-attachments/assets/24dc9c7b-699c-4f28-8a44-3f956eb3cff9" />  
+<img width="70%" height="70%" alt="1  데이터 흐름" src="https://github.com/user-attachments/assets/24dc9c7b-699c-4f28-8a44-3f956eb3cff9" />  
 
 ## 결과
+<img width="70%" height="70%" alt="1  최종결과물" src="https://github.com/user-attachments/assets/166299a5-53f2-4631-b3be-f59cbf0edde7" />
 
 ## 사용 기술
 - Launuage: C
