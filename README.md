@@ -48,7 +48,10 @@
 <img width="70%" height="70%" alt="1  데이터 흐름" src="https://github.com/user-attachments/assets/24dc9c7b-699c-4f28-8a44-3f956eb3cff9" />  
 
 ## 시연
-<img width="100%" height="100%" alt="1  시연 (1)" src="https://github.com/user-attachments/assets/7e2463a1-f191-4fad-adbd-2719b47fefab" />
+<img width="100%" height="100%" alt="1  시연 (1)" src="https://github.com/user-attachments/assets/7e2463a1-f191-4fad-adbd-2719b47fefab" />   
+
+
+
 
 <img width="100%" height="100%" alt="1  시연 (2)" src="https://github.com/user-attachments/assets/6145e0a5-d868-4ade-b278-8e72455c72d9" />
 
